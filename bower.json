@@ -1,0 +1,26 @@
+{
+  "name": "OM  landing",
+  "description": "OM",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [],
+  "authors": [
+    "V. Zbryzskiy"
+  ],
+  "license": "no license",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-2.2.4": "jquery#2.2.4",
+    "jquery.browser": "latest",
+    "font-awesome": "~4.5.0",
+    "bxslider-4": "bx-slider.js#^4.2.5"
+  }
+}

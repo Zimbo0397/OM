@@ -1,0 +1,140 @@
+@import _mixins
+
+@keyframes fadeIn
+	from
+		opacity: 0
+
+	to
+		opacity: 1
+
+@keyframes fadeOut
+	from
+		opacity: 1
+
+	to
+		opacity: 0
+
+@keyframes notification
+	from
+		opacity: 0
+		transform: translateY(20px) translateX(-50%) translateZ(0)
+
+	10%
+		opacity: 1
+		transform: translateY(0) translateX(-50%) translateZ(0)
+
+	90%
+		opacity: 1
+		transform: translateY(0) translateX(-50%) translateZ(0)
+
+	to
+		opacity: 0
+		transform: translateY(-20px) translateX(-50%) translateZ(0)
+
+.fadeIn
+	animation: fadeIn 0.3s
+	animation-fill-mode: both
+.fadeOut
+	animation: fadeOut 0.3s
+	animation-fill-mode: both
+.notification
+	animation: notification 2s
+	animation-fill-mode: both
+
+
+@-webkit-keyframes sdb10
+	0%
+		-webkit-transform: translate(0, 0)
+		opacity: 0
+	40%
+		opacity: 1
+	80%
+		-webkit-transform: translate(0, 20px)
+		opacity: 0
+	100%
+		opacity: 0
+
+@keyframes sdb10
+	0%
+		transform: translate(0, 0)
+		opacity: 0
+	40%	
+		opacity: 1
+	80%
+		transform: translate(0, 20px)
+		opacity: 0
+	100%
+		opacity: 0
+
+@keyframes anim1
+	0%
+		background: url('../img/content/anim-1-test.png')
+		background-size: cover
+		bottom: 0
+		left: 30%
+	2%
+		background: url('../img/content/anim-1-test.png')
+		background-size: cover
+	10%
+		background: url('../img/content/anim-2-test.png')
+		background-size: cover
+	12%
+		background: url('../img/content/anim-1-test.png')
+		background-size: cover
+	20%
+		background: url('../img/content/anim-2-test.png')
+		background-size: cover
+	22%
+		background: url('../img/content/anim-1-test.png')
+		background-size: cover
+	25%
+		bottom: -10px
+	50%
+		bottom: 0px
+		left: 32%
+	59%
+		background: url('../img/content/anim-1-test.png')
+		background-size: cover
+	60%
+		background: url('../img/content/anim-2-test.png')
+		background-size: cover
+	65%
+		background: url('../img/content/anim-1-test.png')
+		background-size: cover
+	75%
+		bottom: -10px
+	100%
+		background: url('../img/content/anim-1-test.png')
+		background-size: cover
+		left: 30%
+		bottom: 0px
+
+
+@keyframes anim2
+	0%
+		top: -50px
+	50%
+		top: 0px
+	100%
+		top: -50px
+
+@keyframes anim3
+	0%
+		background: url('../img/content/anim-4.png')
+		background-size: cover
+	50%
+		background: url('../img/content/anim-5.png')
+		background-size: cover
+	100%
+		background: url('../img/content/anim-4.png')
+		background-size: cover
+@keyframes anim4
+	0%
+		background: url('../img/content/anim-6.png')
+		background-size: cover
+	50%
+		background: url('../img/content/anim-7.png')
+		background-size: cover
+	100%
+		background: url('../img/content/anim-6.png')
+		background-size: cover
