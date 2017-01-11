@@ -89,6 +89,11 @@ $(window).on('load', function() {
 
 		});
 
+
+	$('#mobile-nav-btn').on('click', function() {
+		$('#nav').toggleClass('open')
+	});
+
 	
 });
 

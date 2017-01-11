@@ -36,6 +36,8 @@ body
 
 .full-h
 	height: 100vh
+	@media #{$media-md-max}
+		height: auto
 
 section
 	position: relative
@@ -130,13 +132,15 @@ button, input, select, textarea
 	display: inline-block
 	vertical-align: middle
 	padding-left: 48px
-	@media #{$media-lg-max}
+	@media #{$media-sm-max}
 		display: block
 		padding-left: 0
 	li
 		display: inline-block
 		vertical-align: middle
 		margin-left: 37px
+		@media #{$media-sm-max}
+			margin-left: 10px
 		a
 			font-size: 1.4em
 			color: #fff

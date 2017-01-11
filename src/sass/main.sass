@@ -26,11 +26,37 @@ body
 		padding: 49px 10px
 		padding-left: 112px
 		padding-right: 24px
+		position: relative
+		@media #{$media-sm-max}
+			padding: 15px 10px
+	.socials-holder
+		li
+			@media #{$media-sm-max}
+				display: block
+				margin-left: 0
+				text-align: center
 .brand-holder
 	position: absolute
 	top: 34px
 	left: 23px
-
+	@media #{$media-sm-max}
+		width: 60px
+		left: 0
+.mobile-nav-btn
+	height: 76px
+	display: inline-block
+	padding: 26px
+	position: absolute
+	top: 26px
+	right: 21px
+	@media #{$media-sm-min}
+		display: none
+	span
+		height: 4px
+		width: 40px
+		background: #fff
+		display: block
+		margin-bottom: 5px
 
 .slider-holder
 	&.clear
@@ -87,13 +113,22 @@ body
 			span
 				@media #{$media-lg-max}
 					display: none
+// .socials-holder
+// 	@media #{$media-sm-max}
+// 		display: none
 .nav-holder
 	position: relative
 	vertical-align: middle
 	padding-right: 118px
-	@media #{$media-lg-max}
+	@media #{$media-md-max}
 		padding-right: 30px
+	@media #{$media-sm-max}
+		padding-right: 24px
+
+
 	.nav
+	// 	@media #{$media-sm-max}
+	// 		display: none
 		&.mobile
 			display: block
 			padding-right: 0px
@@ -108,15 +143,23 @@ body
 				transition: max-height .2s
 			li
 				display: block
-				margin-bottom: 10px
+				margin-bottom: 5px
+				.socials-holder
+					@media #{$media-sm-max}
+						display: block
+					li
+						display: inline-block
+
 					
-			@media #{$media-md-min}
-				display: none
+			// @media #{$media-sm-min}
+			// 	display: none
 	li
 		display: inline-block
 		margin-left: 63px
 		@media #{$media-lg-max}
 			margin-left: 10px
+		@media #{$media-sm-max}
+			display: block
 		a
 			display: inline-block
 			color: #fff
@@ -173,18 +216,31 @@ body
 .main-content
 	padding-top: 245px
 	text-align: center
+	padding-bottom: 150px
+	@media #{$media-md-max}
+		padding-top: 150px
 	h2
 		font-size: 4.6em
 		font-weight: 100
 		color: #fff
 		font-family: "Gotham Pro"
 		line-height: 1.4em
+		@media #{$media-md-max}
+			font-size: 3.6em
+		@media #{$media-lp-max}
+			font-size: 2.5em
+			line-height: 1.2em
 	h3
 		color: #fff
 		font-size: 1.56em
 		font-weight: 100
 		line-height: 1.4em
 		margin-top: 4px
+		@media #{$media-md-max}
+			font-size: 1.3em
+		@media #{$media-lp-max}
+			font-size: 1em
+			line-height: 2em
 
 
 .content-nav
@@ -199,10 +255,14 @@ body
 			padding-top: 18px
 			border-right: 1px solid #979797
 			display: block
+			@media #{$media-md-max}
+				height: 76px
 			.image-holder
 				width: 62px
 				display: inline-block
 				position: relative
+				@media #{$media-md-max}
+					width: 42px
 				.hover
 					position: absolute
 					top: 0
@@ -220,13 +280,23 @@ body
 				display: block
 				font-size: 1.6em
 				margin-top: 11px
-			color: #fff
+				color: #fff
+				@media #{$media-md-max}
+					display: none
 
 
 .main-nav .slider-holder
 	height: calc(100vh - 126px)
+	@media #{$media-md-max}
+		height: auto
+	.image-holder
+		@media #{$media-md-max}
+			max-height: 450px
 .text-container
 	height: calc(100vh - 126px)
+	padding-bottom: 60px
+	@media #{$media-md-max}
+		height: auto
 .tabs
 	li
 		height: 0
@@ -247,19 +317,32 @@ body
 		font-weight: 100
 		margin-bottom: 50px
 		margin-top: 80px
+		line-height: 1em
+		@media #{$media-md-max}
+			font-size: 2.2em
+			margin-bottom: 30px
+			margin-top: 60px
 	p
 		margin-bottom: 40px
 		font-size: 1.2em
+		@media #{$media-md-max}
+			font-size: 1em
+			margin-bottom: 10px
 
 
 
 .progress
 	padding-top: 150px
+	@media #{$media-sm-max}
+		padding-top: 40px
 	h3
 		font-size: 3.4em
 		font-weight: 500
 		line-height: 1.4em
 		margin-bottom: 20px
+		@media #{$media-sm-max}
+			font-size: 2.4em
+			line-height: 1em
 	.image-holder
 		height: 390px
 		padding: 20px
@@ -293,6 +376,10 @@ body
 			width: 50px
 			background: rgba(255, 255, 255, 0.48)
 			transition: background .2s
+			@media #{$media-sm-max}
+				height: 30px
+				width: 30px
+
 			&:after
 				content: ''
 				position: absolute
@@ -307,6 +394,10 @@ body
 				border-right: 2px solid #434343
 				border-bottom: none
 				border-left: none
+				@media #{$media-sm-max}
+					height: 15px
+					width: 15px
+
 			&:hover
 				background: #fff
 				transition: background .2s
@@ -317,6 +408,19 @@ body
 				border-left: 2px solid #434343
 				border-top: none
 				border-right: none
+		.image-holder
+			@media #{$media-sm-max}
+				height: 350px
+		.slide
+			&:nth-child(1n+2)
+				@media #{$media-sm-max}
+					display: none !important
+		.inline-layout
+
+			&.col-3 > *
+				@media #{$media-sm-max}
+					display: block
+					width: 100%
 
 
 .slider-indicator
@@ -366,11 +470,16 @@ body
 	padding-top: 150px
 	.maps-header
 		padding-right: 300px
+		@media #{$media-md-max}
+			padding-right: 0
 	h3
 		font-size: 3.4em
 		font-weight: 500
 		line-height: 1.4em
 		margin-bottom: 20px
+		@media #{$media-sm-max}
+			font-size: 2.4em
+			line-height: 1em
 	.down-btn
 		padding: 12px 20px
 		border: 1px solid #000
@@ -380,20 +489,32 @@ body
 		width: 260px
 		text-align: center
 		font-size: 1.3em
+		@media #{$media-md-max}
+			display: none
 	.map-holder
 		margin-bottom: 45px
 		#map
 			height: 620px
 			width: 100%
+			@media #{$media-sm-max}
+				height: 250px
 
 .contacts
 	padding-top: 147px
 	padding-bottom: 160px
+	@media #{$media-sm-max}
+		padding-top: 30px
+		padding-bottom: 70px
 	h3
 		text-align: center
 		font-size: 3.4em
 		line-height: 1.4em
 		margin-bottom: 61px
+		@media #{$media-md-max}
+			font-size: 2.4em
+			line-height: 1em
+		@media #{$media-sm-max}
+			margin-bottom: 10px
 	li
 		text-align: center
 	.image-holder
@@ -409,47 +530,85 @@ body
 	.soc
 		li
 			margin: 0 4px
+	.inline-layout
+		&.col-4 > *
+			@media #{$media-sm-max}
+				width: 100%
+				margin-top: 10px
 
 .footer
 	padding-top: 208px
+	@media #{$media-sm-max}
+		padding-top: 60px
+	.socials-holder
+		@media #{$media-sm-max}
+			display: none
 	.footer-description
+		@media #{$media-sm-max}
+			text-align: center
 		.subscribe
 			padding-left: 154px
 			max-width: 481px
 			margin-right: 40px
+			@media #{$media-lg-max}
+				margin-right: 0
+				padding-left: 84px
+				margin-bottom: 10px
+			@media #{$media-sm-max}
+				margin: 0
+				padding: 0
+				margin-bottom: 10px
 			img
 				position: absolute
 				top: -10px
 				left: 66px
 				width: 68px
+				@media #{$media-lg-max}
+					left: 20px
+				@media #{$media-sm-max}
+					position: static
 			p
 				font-size: 1.15em
 				color: #fff
 				white-space: normal
 				line-height: 1.5em
+				@media #{$media-sm-max}
+					display: none
 		.send
+			@media #{$media-sm-max}
+				display: block
 			input
 				height: 46px
-				width: 260px
+				width: 240px
 				padding: 5px 20px
 				margin-right: 7px
+				@media #{$media-sm-max}
+					display: block
+					margin: 10px auto 
 			button
 				color: #fff
 				width: 159px
 				font-size: 1.3em
 				vertical-align: middle
 				border-color: #fff
+				@media #{$media-sm-max}
+					margin-top: 10px
 	.rights-line
 		margin-top: 209px
 		height: 93px
 		padding: 43px 15px
 		background: #222222
+		@media #{$media-sm-max}
+			margin-top: 80px
+			text-align: center
 		.rights
 			font-size: 1.15em
 			position: absolute
 			top: -10px
 			left: 60px
 			color: #fff
+			@media #{$media-sm-max}
+				position: static
 		.socials-holder
 			position: absolute
 			top: -10px
