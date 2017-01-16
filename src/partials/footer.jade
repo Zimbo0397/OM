@@ -9,9 +9,13 @@ section.footer(style="background-image: url(img/content/foot-bg.jpg)")
 							p
 								|Подпишитесь на нашу рассылку новостей чтобы быть вкурсе новых предложений
 						.send
-							input(type="text", placeholder="Ваше имя")
-							input(type="text", placeholder="Ваша почта")
-							button.button Подписаться
+							.form-group
+								p(data-validate-for="name", class="visible") Ім'я обов'язкове до заповнення
+								input(type="text", placeholder="Ваше имя")
+							.form-group
+								p(data-validate-for="email", class="visible") Email обов'язковий до заповнення
+								input(type="text", placeholder="Ваша почта")
+								button.button Подписаться
 		.rights-line
 			.container
 				a.rights(href="#") © OM Architecture 2017 
