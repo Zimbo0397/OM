@@ -42,6 +42,20 @@ body
 	@media #{$media-sm-max}
 		width: 60px
 		left: 0
+		top: 16px
+	.lang
+		margin-top: 5px
+		@media #{$media-sm-max}
+			margin-top: 14px
+		a
+			display: inline-block
+			margin-left: 5px
+			margin-right: 5px
+			color: #fff
+			font-weight: 100
+			@media #{$media-sm-max}
+				margin-left: 2px
+				margin-right: 2px
 .mobile-nav-btn
 	height: 76px
 	display: inline-block
@@ -424,6 +438,23 @@ body
 
 
 .slider-indicator
+	.year
+		position: relative
+	.year > *
+		position: absolute
+		top: 0
+		display: inline-block
+		@media #{$media-ds-max}
+			top: 50px
+
+		&.left
+			left: -46px
+			@media #{$media-ds-max}
+				left: 0px
+		&.right
+			right: -56px
+			@media #{$media-ds-max}
+				right: -3px
 	li
 		position: relative
 		border-bottom: 2px solid #c0c0c0
@@ -454,16 +485,62 @@ body
 			&:first-child
 				&:before
 					background: #000
-
 		span
 			position: absolute
 			top: -20px
 			right: -17px
 			font-weight: 600
 			color: #c0c0c0
+			display: inline-block
 			&.first
 				left: 0
 				right: auto
+			&.top
+				bottom: -35px
+				top: auto
+				right: -9px
+	&.indicator-25
+		li
+			&:first-child
+				border-bottom: 2px solid #000
+				span
+					color: #000
+				&:after
+					background: #000
+				&:before
+					background: #000
+	&.indicator-50
+		li
+			&:nth-child(-n+2)
+				border-bottom: 2px solid #000
+				span
+					color: #000
+				&:after
+					background: #000
+				&:before
+					background: #000
+	&.indicator-75
+		li
+			&:nth-child(-n+3)
+				border-bottom: 2px solid #000
+				span
+					color: #000
+				&:after
+					background: #000
+				&:before
+					background: #000
+	&.indicator-100
+		li
+			&:nth-child(-n+4)
+				border-bottom: 2px solid #000
+				span
+					color: #000
+				&:after
+					background: #000
+				&:before
+					background: #000
+
+
 
 
 .maps
@@ -486,7 +563,6 @@ body
 		position: absolute
 		top: 8px
 		right: 0px
-		width: 260px
 		text-align: center
 		font-size: 1.3em
 		@media #{$media-md-max}
@@ -527,6 +603,7 @@ body
 		margin-bottom: 16px
 	span
 		font-size: 1.2em
+		display: block
 	.soc
 		li
 			margin: 0 4px

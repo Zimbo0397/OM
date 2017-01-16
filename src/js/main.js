@@ -63,30 +63,7 @@ $(window).on('load', function() {
 
 	var timeSlider = $('#bxslider2').bxSlider({
 			infiniteLoop: false,
-			hideControlOnEnd: true,
-			onSlidePrev: function() {
-				var currentSlide = timeSlider.getCurrentSlide();
-
-				$('#slider-indicator li').removeClass('active');
-				$('#slider-indicator li').each(function(index) {
-					if (currentSlide > index - 1) {
-						$(this).addClass('active');
-					}
-				});
-
-			},
-			onSlideNext: function() {
-				var currentSlide = timeSlider.getCurrentSlide();
-
-				$('#slider-indicator li').removeClass('active');
-				$('#slider-indicator li').each(function(index) {
-					if (currentSlide > index - 1) {
-						$(this).addClass('active');
-					}
-				});
-
-			}
-
+			hideControlOnEnd: true
 		});
 
 
@@ -97,3 +74,12 @@ $(window).on('load', function() {
 	
 });
 
+
+$(document).ready(function(){
+    $("#main-nav").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});

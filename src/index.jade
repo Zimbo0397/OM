@@ -11,7 +11,7 @@ html(lang='ru')
 
 		.black-plate
 
-		section.main.full-h(style="background-image: url(img/content/main-bg.jpg)")
+		section#main.main.full-h(style="background-image: url(img/content/main-bg.jpg)")
 			include ./partials/top-line.jade
 			.container
 				.main-content
@@ -92,7 +92,7 @@ html(lang='ru')
 								|Что постигают зодчим само, стал превратное тягостными человек когда страдания приносят за отвергает по возникают обстоятельства приносят предаваться именно постигают наслаждение только, чтобы приносят. Немалое такого постигают несло я собой счастливой стремящегося никакого за когда. Наслаждений перед которого кто это представление некое лишь людей картину то, само страдания восхваляющих предаваться это я. Того, никаких не немалое нас предаваться раз, которое несло действительно с справедливости отвергает тех.
 							p
 								|Представление которого такого наслаждений если за, представление зодчим избегал приносят когда предпочел умеет некоей говорил человек. Несло стал какими воспользоваться откуда возникает если иной за было которого презирает и такого если стремящегося а равно боль обстоятельства представление человек превратное боль. То нас кто зодчим неприятностей раз некоей страдание, действительно которого это — не того.
-		section.main-nav
+		section.main-nav#portfolio
 			.slider-holder.clear
 				ul#bxslider
 					li
@@ -177,17 +177,25 @@ html(lang='ru')
 										img.fake-img(src='img/content/f69.jpg', alt='img/content/f69.jpg')
 										.img(style='background-image: url( "img/content/f69.jpg")')
 
-					#slider-indicator.slider-indicator
+					#slider-indicator.slider-indicator.indicator-50
+						.year
+							.left 2017
+							.right 2017
 						ul.inline-layout.col-4
-							li.active
+							li
 								span.first 0%
 								span 25%
+								span.top 0.2
+								span.top.first 0.3
 							li
 								span 50%
+								span.top 0.4
 							li
 								span 75%
+								span.top 0.5
 							li
 								span 100%
+								span.top 0.6
 
 
 
@@ -201,7 +209,7 @@ html(lang='ru')
 
 
 
-		section.contacts
+		section.contacts#contacts
 			.container
 				h3 Контакты
 				ul.inline-layout.col-4
@@ -219,6 +227,7 @@ html(lang='ru')
 						.image-holder
 							img(src="img/icons/smartphone.svg", alt="")
 						p Телефон:
+						span +38 068 129 27 97
 						span +38 068 129 27 97
 					li
 						.image-holder
