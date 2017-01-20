@@ -41,7 +41,9 @@ body
 	position: absolute
 	top: 34px
 	left: 23px
-	width: 135px
+	width: 300px
+	@media #{$media-md-max}
+		width: 160px
 	@media #{$media-sm-max}
 		width: 60px
 		left: 0
@@ -137,7 +139,7 @@ body
 	position: relative
 	vertical-align: middle
 	padding-right: 118px
-	@media #{$media-md-max}
+	@media #{$media-lg-max}
 		padding-right: 30px
 	@media #{$media-sm-max}
 		padding-right: 24px
