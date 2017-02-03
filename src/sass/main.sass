@@ -18,7 +18,14 @@ body
 //----------------------------------
 // TOP-line
 //----------------------------------
-
+.tab-close
+	background: url(../img/icons/ic_clear_black_24px.svg)
+	width: 30px
+	height: 30px
+	position: absolute
+	top: 0
+	right: 0
+	background-size: cover
 .top-line
 	border: 1px solid #fff
 	text-align: right
@@ -51,8 +58,11 @@ body
 .lang
 	position: absolute
 	width: 100px
-	bottom: 27px
-	right: 18px
+	bottom: 55px
+	right: -67px
+	@media #{$media-ds-max}
+		bottom: 26px
+		right: 37px
 	@media #{$media-sm-max}
 		left: -38px
 		right: auto
@@ -272,7 +282,7 @@ body
 			a
 				border: none
 		a
-			background: #222222
+			background: #1B1B1B
 			text-align: center
 			height: 126px
 			padding-top: 18px
@@ -301,7 +311,7 @@ body
 
 			span
 				display: block
-				font-size: 1.6em
+				font-size: 1.3em
 				margin-top: 11px
 				color: #fff
 				@media #{$media-md-max}
@@ -402,6 +412,7 @@ body
 		font-weight: 500
 		line-height: 1.4em
 		margin-bottom: 20px
+		text-align: center
 		@media #{$media-sm-max}
 			font-size: 2.4em
 			line-height: 1em
@@ -604,6 +615,7 @@ body
 		font-weight: 500
 		line-height: 1.4em
 		margin-bottom: 20px
+		text-align: center
 		@media #{$media-sm-max}
 			font-size: 2.4em
 			line-height: 1em
@@ -641,6 +653,8 @@ body
 			line-height: 1em
 		@media #{$media-sm-max}
 			margin-bottom: 10px
+	ul
+		text-align: center
 	li
 		text-align: center
 	.image-holder

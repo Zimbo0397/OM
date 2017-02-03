@@ -74,6 +74,14 @@ $('.content-nav li a').each(function() {
 
 $(window).on('load', function() {
 
+	$('.tab-close').each(function() {
+		$(this).on('click', function(e) {
+			e.preventDefault();
+			$('#main-tabs li').removeClass('active');
+			$('.content-nav li a').removeClass('active');
+		});
+	});
+
 	$('#bxslider').bxSlider({
 	  auto: true
 	});
