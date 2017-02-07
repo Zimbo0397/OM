@@ -1,33 +1,33 @@
-section.footer(style="background-image: url(img/content/foot-bg.jpg)") 
+section.section.fp-auto-height.footer(style="background-image: url(img/content/foot-bg.jpg)") 
+	.container
+		.footer-description
+			form(action="")
+				.inline-layout
+					.subscribe
+						a(href="#")
+							img(src="img/icons/e-mail-envelope.svg", alt="")
+						p
+							|Подпишитесь на нашу рассылку новостей чтобы быть вкурсе новых предложений
+					.send
+						.form-group
+							p(data-validate-for="name", class="visible") Ім'я обов'язкове до заповнення
+							input(type="text", placeholder="Ваше имя")
+						.form-group
+							p(data-validate-for="email", class="visible") Email обов'язковий до заповнення
+							input(type="text", placeholder="Ваша почта")
+							button.button Подписаться
+	.rights-line
 		.container
-			.footer-description
-				form(action="")
-					.inline-layout
-						.subscribe
-							a(href="#")
-								img(src="img/icons/e-mail-envelope.svg", alt="")
-							p
-								|Подпишитесь на нашу рассылку новостей чтобы быть вкурсе новых предложений
-						.send
-							.form-group
-								p(data-validate-for="name", class="visible") Ім'я обов'язкове до заповнення
-								input(type="text", placeholder="Ваше имя")
-							.form-group
-								p(data-validate-for="email", class="visible") Email обов'язковий до заповнення
-								input(type="text", placeholder="Ваша почта")
-								button.button Подписаться
-		.rights-line
-			.container
-				a.rights(href="#") © OM Architecture 2017 
-				ul.socials-holder
-					li
-						a(href="#")
-							i.fa.fa-instagram
-					li
-						a(href="#")
-							i.fa.fa-facebook
-					li
-						a(href="#")
-							i.fa.fa-pinterest-p
+			a.rights(href="#") © OM Architecture 2017 
+			ul.socials-holder
+				li
+					a(href="#")
+						i.fa.fa-instagram
+				li
+					a(href="#")
+						i.fa.fa-facebook
+				li
+					a(href="#")
+						i.fa.fa-pinterest-p
 
 					

@@ -47,6 +47,8 @@ $('.content-nav li a').each(function() {
 	var atrrNum = $(this).attr('data-tab');
 	$(this).on('click', function(e) {
 		e.preventDefault();
+
+		$('.main-modal').addClass('open');
 		// $('.content-nav li a').removeClass('active');
 
 		// $(this).addClass('active');
@@ -77,6 +79,7 @@ $(window).on('load', function() {
 	$('.tab-close').each(function() {
 		$(this).on('click', function(e) {
 			e.preventDefault();
+			$('.main-modal').removeClass('open');
 			$('#main-tabs li').removeClass('active');
 			$('.content-nav li a').removeClass('active');
 		});
@@ -100,11 +103,19 @@ $(window).on('load', function() {
 });
 
 
-$(document).ready(function(){
-    $("#main-nav").on("click","a", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
+// $(document).ready(function(){
+//     $("#main-nav").on("click","a", function (event) {
+//         event.preventDefault();
+//         var id  = $(this).attr('href'),
+//             top = $(id).offset().top;
+//         $('body,html').animate({scrollTop: top}, 1500);
+//     });
+// });
+
+
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+    	anchors: ['main', 'portfolio', 'main-nav-content', 'about', 'progress', 'maps', 'contacts']
     });
 });
+
