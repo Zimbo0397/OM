@@ -115,7 +115,7 @@ $(window).on('load', function() {
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
-    	anchors: ['main', 'portfolio', 'main-nav-content', 'about', 'progress', 'maps', 'contacts']
+    	anchors: ['main', 'portfolio', 'progress', 'maps', 'contacts']
     });
 });
 
